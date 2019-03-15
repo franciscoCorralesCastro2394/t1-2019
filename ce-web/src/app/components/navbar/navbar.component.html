@@ -7,16 +7,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['noticias-list']">Lista de noticias</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" [routerLink]="['noticias-insert']">Lista de noticias</a>
             </li>
             <li class="nav-item">
                 <button class="btn btn-outline-primary" type="button" (click)="prueba()" id="button-addon2">Buscar</button>
                 <button class="btn btn-outline-primary" type="button" (click)="prueba1()" id="button-addon2">Buscar</button>
             </li>
-
         </ul>
     </div>
 </nav>
