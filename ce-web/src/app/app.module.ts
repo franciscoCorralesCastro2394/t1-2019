@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DatePipe } from '@angular/common';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { DataStorageService  } from '../app/services/data-storage.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [ DatePipe],
+  providers: [ DatePipe,DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
