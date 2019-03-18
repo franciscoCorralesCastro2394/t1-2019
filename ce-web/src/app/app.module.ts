@@ -14,6 +14,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NoticiasUpsertComponent } from './components/noticias-upsert/noticias-upsert.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NoticiasComponent } from './components/noticias/noticias.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     NoticiasListComponent,
-    NoticiasUpsertComponent
+    NoticiasUpsertComponent,
+    NoticiasComponent
     
   ],
   imports: [

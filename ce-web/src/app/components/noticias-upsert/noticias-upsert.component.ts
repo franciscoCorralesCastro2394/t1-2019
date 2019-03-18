@@ -14,7 +14,7 @@ export class NoticiasUpsertComponent implements OnInit {
   ngOnInit() {
   }
 
-  iniciarNoticia = () => {
+ /* iniciarNoticia = () => {
     this.formGroup = this.formBuilder.group({
       id: ['(nueva)', [Validators.required],],
       titulo: ['', [Validators.required]],
@@ -25,5 +25,5 @@ export class NoticiasUpsertComponent implements OnInit {
     });
   }
 
-
+*/
 }

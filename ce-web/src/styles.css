@@ -2,5 +2,14 @@
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
 .bg-principal {
-    background-color: midnightblue;
+    background-color: rgb(16, 16, 29);
+}
+
+body {
+    margin-bottom: 90px;
+}
+
+._cardsImg {
+    height: 180px;
+    width: 643px;
 }
