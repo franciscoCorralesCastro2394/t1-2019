@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataStorageService } from '../../services/data-storage.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-noticias-list',
@@ -8,13 +9,17 @@ import { DataStorageService } from '../../services/data-storage.service';
 })
 export class NoticiasListComponent implements OnInit {
   private noticias:any[];  
-  constructor(private dataStorage:DataStorageService ) {
+  constructor(private dataStorage:DataStorageService,
+              private router:Router) {
 
     this.getNoticias();
    
   }
    
- 
+   editarNoticia(id:number){
+     console.log(id);
+     this.router.navigate(['/noticias-view',id]);
+   }
 
   ngOnInit() {
   

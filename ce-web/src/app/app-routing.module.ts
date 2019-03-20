@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'noticias-list', component: NoticiasListComponent},
   { path: 'noticias-edit/:id', component:  NoticiasUpsertComponent},
   { path: 'noticias-insert', component:  NoticiasUpsertComponent},
-  { path: 'noticias-view', component:  NoticiasComponent},
+  { path: 'noticias-view/:id', component:  NoticiasComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'noticias-list'}
 ];
 

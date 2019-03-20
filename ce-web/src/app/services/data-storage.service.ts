@@ -88,4 +88,24 @@ setObjectValue = (key:string, objectValue:any)=>{
     }
   
   }
+
+
+  getObjectNoticia = (key:string) => {
+    if (window.localStorage) {
+        const DATA = JSON.parse(localStorage.getItem(key.toString()));
+        console.log(DATA);
+     if (DATA) {
+        return DATA;
+      }else{
+        throw new Error('No se encontró el valor ${key} en el localStorage');
+      } 
+    }else{
+      throw new Error('No se puede obtener la información, porque no está habilitado el localStorage');
+    }
+  
+  }
+
+
+
+
 }
