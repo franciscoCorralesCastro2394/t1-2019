@@ -31,7 +31,7 @@ setObjectValue = (key:string, objectValue:any)=>{
 
   getObjectValue = (key:string) => {
     if (window.localStorage) {
-      const DATA= JSON.parse(localStorage.getItem(key));
+      const DATA= JSON.parse(localStorage.getItem('1'));
       if (DATA) {
         return DATA;
       }else{
