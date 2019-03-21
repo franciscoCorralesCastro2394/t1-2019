@@ -18,16 +18,12 @@ export class NoticiasListComponent implements OnInit {
    
    editarNoticia(id:number){
      console.log(id);
-     this.router.navigate(['/noticias-view',id]);
+     this.router.navigate(['/noticias-edit',id]);
    }
 
   ngOnInit() {
   
   }
-
-   
-
- 
 
 
   getNoticias = () => {

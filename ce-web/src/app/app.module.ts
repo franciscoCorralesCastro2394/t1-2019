@@ -15,6 +15,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NoticiasUpsertComponent } from './components/noticias-upsert/noticias-upsert.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NoticiasComponent } from './components/noticias/noticias.component';
+import { NoticiasInsertComponent } from './components/noticias-insert/noticias-insert.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { NoticiasComponent } from './components/noticias/noticias.component';
     FooterComponent,
     NoticiasListComponent,
     NoticiasUpsertComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    NoticiasInsertComponent
     
   ],
   imports: [
