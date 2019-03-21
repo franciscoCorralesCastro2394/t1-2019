@@ -8,7 +8,7 @@ import {NoticiasInsertComponent} from './components/noticias-insert/noticias-ins
 
 const routes: Routes = [
   { path: 'noticias-list', component: NoticiasListComponent},
-  { path: 'noticias-edit/:id', component:  NoticiasUpsertComponent},
+  { path: 'noticias-edit/:id', component:  NoticiasInsertComponent},
   { path: 'noticias-insert', component: NoticiasInsertComponent },
   { path: 'noticias-view', component:  NoticiasComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'noticias-list'}
@@ -19,3 +19,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

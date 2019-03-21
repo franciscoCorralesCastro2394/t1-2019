@@ -106,6 +106,8 @@ setObjectValue = (key:string, objectValue:any)=>{
   }
 
 
+
+
   guarData = (key:string, objectValue:any)=>{
 
     if (window.localStorage) {
@@ -114,6 +116,8 @@ setObjectValue = (key:string, objectValue:any)=>{
       throw new Error('No se puede almacenar la información, porque no está habilitado el localStorage');
     }
   }
+
+
 
 
 }
