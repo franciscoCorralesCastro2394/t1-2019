@@ -106,6 +106,14 @@ setObjectValue = (key:string, objectValue:any)=>{
   }
 
 
+  guarData = (key:string, objectValue:any)=>{
+
+    if (window.localStorage) {
+        localStorage.setItem(key,JSON.stringify(objectValue));
+    }else{
+      throw new Error('No se puede almacenar la información, porque no está habilitado el localStorage');
+    }
+  }
 
 
 }
