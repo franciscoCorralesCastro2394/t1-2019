@@ -13,12 +13,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  prueba = () => {
-    console.log("prueba");
-     console.log(this.dataStorage.setObjectValue('123','prueba'));
-  }
-  prueba1 = () => {
-     console.log(this.dataStorage.getObjectValue('123'));
-  }
+
 
 }

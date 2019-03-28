@@ -14,8 +14,10 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NoticiasUpsertComponent } from './components/noticias-upsert/noticias-upsert.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NoticiasComponent } from './components/noticias/noticias.component';
-import { NoticiasInsertComponent } from './components/noticias-insert/noticias-insert.component';
+import { PrivateComponent } from './components/private/private.component';
+import { LoginComponent } from './components/login/login.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+
 
 
 @NgModule({
@@ -25,8 +27,10 @@ import { NoticiasInsertComponent } from './components/noticias-insert/noticias-i
     FooterComponent,
     NoticiasListComponent,
     NoticiasUpsertComponent,
-    NoticiasComponent,
-    NoticiasInsertComponent
+    PrivateComponent,
+    LoginComponent,
+    AcercaDeComponent,
+
     
   ],
   imports: [

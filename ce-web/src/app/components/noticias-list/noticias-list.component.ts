@@ -12,13 +12,13 @@ export class NoticiasListComponent implements OnInit {
   constructor(private dataStorage:DataStorageService,
               private router:Router) {
 
-    this.getNoticias();
+      this.getNoticias();
    
   }
    
-   editarNoticia(id:number){
-     console.log(id);
-     this.router.navigate(['/noticias-edit',id]);
+   editarNoticia(noti:any){
+     console.log(noti);
+     this.router.navigate(['/noticias-edit',noti.Id]);
    }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class NoticiasListComponent implements OnInit {
 
 
   getNoticias = () => {
-    this.noticias = this.dataStorage.getObjectValue('123');
+    this.noticias = this.dataStorage.getObjectValue('noticias');
     console.log(this.noticias);
     console.log("pruebas");
 
