@@ -17,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PrivateComponent } from './components/private/private.component';
 import { LoginComponent } from './components/login/login.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
-
+import {AuthGuard} from '../app/guards/auth.guard';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 
 @NgModule({
@@ -30,8 +31,7 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     PrivateComponent,
     LoginComponent,
     AcercaDeComponent,
-
-    
+    PipesComponent,  
   ],
   imports: [
     BrowserModule,
@@ -41,7 +41,7 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     AngularFontAwesomeModule,
     ReactiveFormsModule
   ],
-  providers: [ DatePipe,DataStorageService],
+  providers: [ DatePipe,DataStorageService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
