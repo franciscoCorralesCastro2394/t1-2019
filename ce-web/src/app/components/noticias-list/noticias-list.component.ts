@@ -12,7 +12,7 @@ export class NoticiasListComponent implements OnInit {
   constructor(private dataStorage:DataStorageService,
               private router:Router) {
 
-      this.getNoticias();
+     this.getNoticias();
    
   }
    

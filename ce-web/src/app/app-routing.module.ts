@@ -16,11 +16,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'acerca-de', component: AcercaDeComponent },
   { path: 'pipes', component: PipesComponent },
-  { path: 'private', component: PrivateComponent, canActivate:[AuthGuard], children:[
-      { path: 'noticias-list', component: NoticiasListComponent },
-      { path: 'noticias-edit/:id', component: NoticiasUpsertComponent },
-      { path: 'noticias-insert', component: NoticiasUpsertComponent },
-  ] },
+  { path: 'noticias-list', component: NoticiasListComponent },
+  { path: 'noticias-edit/:id', component: NoticiasUpsertComponent },
+  { path: 'noticias-insert', component: NoticiasUpsertComponent },
+  //{ path: 'private', component: PrivateComponent, canActivate:[AuthGuard], children:[
+
+  //] },
   { path: '**', component: NoticiasListComponent }
 ];
 
