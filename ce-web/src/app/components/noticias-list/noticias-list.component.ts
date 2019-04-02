@@ -27,9 +27,9 @@ export class NoticiasListComponent implements OnInit {
 
 
   getNoticias = () => {
-    this.noticias = this.dataStorage.getObjectValue('123');
+    this.noticias = this.dataStorage.getObjectValue('noticias');
     console.log(this.noticias);
-    console.log("pruebas");
+    console.log(this.noticias);
 
   }
 

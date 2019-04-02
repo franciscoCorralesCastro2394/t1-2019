@@ -17,7 +17,7 @@ export class NoticiasComponent implements OnInit {
      // console.log(this.noticia);
     //})
 
-     this.noticia = data.getObjectValue('123');
+     this.noticia = data.getObjectValue('noticias');
      console.log(this.noticia);
   }
 

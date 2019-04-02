@@ -11,9 +11,10 @@ import {ActivatedRoute} from '@angular/router'
 export class NoticiasInsertComponent implements OnInit {
   formGroup: FormGroup;
   noticiaId:number;
-  constructor(private formBuilder:FormBuilder, private data:DataStorageService,private activatedRoute:ActivatedRoute ) { 
+  constructor(private formBuilder:FormBuilder, private dataStorageService:DataStorageService,private activatedRoute:ActivatedRoute ) { 
     this.iniciarNoticia();
-    this.noticiaId = this.activatedRoute.snapshot.params['id'];
+    //if(this.activatedRoute.snapshot.params['id']){
+    //this.cargarNoticia(this.activatedRoute.snapshot.params['id']);}
   }
 
   iniciarNoticia = () => {
@@ -31,7 +32,7 @@ export class NoticiasInsertComponent implements OnInit {
   }
 
   cargarNoticia = (id: number) => {
-    const listaNoticias = this.data.getObjectValue("noticias");
+    const listaNoticias = this.dataStorageService.getObjectValue("noticias");
     listaNoticias.forEach(noticia => {
       if (noticia.id == id) {
         this.formGroup = this.formBuilder.group({
@@ -48,9 +49,11 @@ export class NoticiasInsertComponent implements OnInit {
 
 
   guardarData = () => {
+    console.log(this.formGroup.valid);
+    console.log(this.formGroup);
     if (this.formGroup.valid) {
       let noticiaIndex = -1;
-      const listaNoticias = this.data.getObjectValue("noticias");
+      const listaNoticias = this.dataStorageService.getObjectValue("noticias");
       listaNoticias.forEach((noticia, index) => {
         if (noticia.id == this.formGroup.value.id) {
           noticiaIndex = index;
@@ -64,7 +67,7 @@ export class NoticiasInsertComponent implements OnInit {
       }
       this.formGroup.patchValue({ "ultimaModificacion": new Date() });
 
-      this.data.setObjectValue("noticias", listaNoticias);
+      this.dataStorageService.setObjectValue("noticias", listaNoticias);
 
       alert("Información guardada");
     } else {

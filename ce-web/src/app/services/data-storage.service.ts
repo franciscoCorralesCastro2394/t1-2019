@@ -60,7 +60,7 @@ setObjectValue = (key:string, objectValue:any)=>{
   console.log(noti);
   if (window.localStorage) {
     noticias.forEach(function(n){
-      localStorage.setItem(n.Id.toString(),JSON.stringify(n));
+      localStorage.setItem('noticias',JSON.stringify(n));
       console.log(n);
     });
        
@@ -74,7 +74,7 @@ setObjectValue = (key:string, objectValue:any)=>{
     let noticias:any[] = []; 
     if (window.localStorage) {
       for(let i=1; i<=4; i++){
-        const DATA = JSON.parse(localStorage.getItem(i.toString()));
+        const DATA = JSON.parse(localStorage.getItem('noticias'));
         console.log(DATA);
         noticias.push(DATA);
       }
@@ -116,6 +116,7 @@ setObjectValue = (key:string, objectValue:any)=>{
       throw new Error('No se puede almacenar la información, porque no está habilitado el localStorage');
     }
   }
+
 
 
 
