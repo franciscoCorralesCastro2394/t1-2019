@@ -12,13 +12,13 @@ export class NoticiasListComponent implements OnInit {
   constructor(private dataStorage:DataStorageService,
               private router:Router) {
 
-    this.getNoticias();
+     this.getNoticias();
    
   }
    
-   editarNoticia(id:number){
-     console.log(id);
-     this.router.navigate(['/noticias-edit',id]);
+   editarNoticia(noti:any){
+     console.log(noti);
+     this.router.navigate(['/noticias-edit',noti.Id]);
    }
 
   ngOnInit() {
