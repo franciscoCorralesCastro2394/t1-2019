@@ -70,23 +70,23 @@ setObjectValue = (key:string, objectValue:any)=>{
 }
 
 
-  getObjectValue = (key:string) => {
-    let noticias:any[] = []; 
-    if (window.localStorage) {
-      for(let i=1; i<=4; i++){
-        const DATA = JSON.parse(localStorage.getItem('noticias'));
-        console.log(DATA);
-        noticias.push(DATA);
-      }
-     if (noticias) {
-        return noticias;
-      }else{
-        throw new Error('No se encontró el valor ${key} en el localStorage');
-      } 
-    }else{
-      throw new Error('No se puede almacenar la información, porque no está habilitado el localStorage');
-    }
-  }
+  // getObjectValue = (key:string) => {
+  //   let noticias:any[] = []; 
+  //   if (window.localStorage) {
+  //     for(let i=1; i<=4; i++){
+  //       const DATA = JSON.parse(localStorage.getItem('noticias'));
+  //       console.log(DATA);
+  //       noticias.push(DATA);
+  //     }
+  //    if (noticias) {
+  //       return noticias;
+  //     }else{
+  //       throw new Error('No se encontró el valor ${key} en el localStorage');
+  //     } 
+  //   }else{
+  //     throw new Error('No se puede almacenar la información, porque no está habilitado el localStorage');
+  //   }
+  // }
     getObjectValue= (key:string)=>{
       if (window.localStorage) {
         const DATA= JSON.parse(localStorage.getItem(key));
